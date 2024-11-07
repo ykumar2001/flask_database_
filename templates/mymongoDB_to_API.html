@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello!user</h1>
+    <!-- {{data}} -->
+  
+    <table>
+        <thead>
+        <tr><th>F_name</th>
+            <th></th>
+            <th>L_name</th>
+            <th>Action </th>
+        </tr>
+        </thead>
+        <tbody>
+            {% for i in data %}
+        <tr>
+            <td><a href="/detinfo/{{i['_id']}}">{{i['first_name']}}</a></td>
+            <td></td>
+            <td>{{i['last_name']}}</td>
+            <td><a href="/tab/{{i['_id']}}">delete</a></td>
+        </tr>
+    {% endfor %}
+
+    </tbody>
+    </table>    
+
+</body>
+</html>
